@@ -21,10 +21,12 @@
             <div class="grid-item">Url</div>
             <div class="grid-item">Short Url</div>
             <div class="grid-item">Clicks</div>
-            
-                <div class="grid-item"><a href="https://url.largodeprueba.com">https://url.largodeprueba.com</a></div>
-                <div class="grid-item"><a href="https://HtdscD.com">https://HtdscD.com</a></div>
-                <div class="grid-item">35</div>
+            <% shortUrls.forEach(shortUrl => { %>
+                <div class="grid-item"><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></div>
+                <div class="grid-item"><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></div>
+                <div class="grid-item"><%= shortUrl.clicks %></div>
+            <% }) %>
+
 
 
 
